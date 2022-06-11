@@ -1,0 +1,22 @@
+color:
+    background: "#0A0024"
+    title: "#ABFFFC"
+    subtitle: "#fff"
+    text: "rgba(255,255,255,.75)"
+    bgcard: rgba(255,255,255,.05)
+    brcard: rgba(255,255,255,.1)
+maxwidth: 1080px
+size:
+    "1": 4px
+    "2": 8px
+    "3": 12px
+    "4": 16px
+    "5": 20px
+    "6": 32px
+    "7": 60px
+    "8": 120px
+font:
+    line:
+        text: "1.6"
+        title: "1.6"
+    bold: 600
