@@ -5,3 +5,4 @@ export * from "./site-section/site-section";
 export * from "./site-slide/site-slide";
 export * from "./site-text/site-text";
 export * from "./site-title/site-title";
+export * from "./site-atom/site-atom";

@@ -9,7 +9,7 @@
 
 ```jsx {%name|kebabCase%}/{%name|kebabCase%}.tsx
 import { c, css } from "atomico";
-import { Tokens } from "../site-tokens/site-tokens";
+import { tokens } from "../site-tokens/site-tokens";
 
 function {%name|camelCase%}() {
   return (

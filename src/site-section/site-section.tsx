@@ -1,7 +1,7 @@
-import { Props, c, css } from "atomico";
+import { c, css } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 
-function siteSection({ myProp }: Props<typeof siteSection>) {
+function siteSection() {
     return (
         <host shadowDom>
             <div class="layout">
@@ -27,8 +27,12 @@ siteSection.styles = [
     tokens,
     css`
         :host {
+            --gap: var(--size-7);
+            --padding: var(--size-8) var(--size-4);
             display: block;
+            padding: var(--padding);
             background: var(--color-background);
+            box-sizing: border-box;
         }
         .left {
             grid-area: left;
@@ -47,6 +51,8 @@ siteSection.styles = [
             max-width: var(--maxwidth);
             margin: auto;
             display: grid;
+            align-items: center;
+            gap: var(--gap);
             grid-template:
                 "left right" auto
                 "content content" auto / 1fr 1fr;

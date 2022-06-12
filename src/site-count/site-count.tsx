@@ -29,9 +29,10 @@ siteCount.styles = [
             --size: var(--size-5);
             --dot-color: var(--color-background);
             display: grid;
+            align-items: center;
             grid-template-columns: auto 1fr;
             gap: var(--size-5);
-            font-size: calc(--size * 0.6);
+            font-size: calc(var(--size) * 0.6);
         }
         .dot {
             width: var(--size);
@@ -41,7 +42,6 @@ siteCount.styles = [
             align-items: center;
             justify-content: center;
             border-radius: 100px;
-
             font-weight: var(--font-bold);
             color: var(--dot-color);
         }
