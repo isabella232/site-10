@@ -6,3 +6,5 @@ export * from "./site-slide/site-slide";
 export * from "./site-text/site-text";
 export * from "./site-title/site-title";
 export * from "./site-atom/site-atom";
+export * from "./site-isotype/site-isotype";
+export * from "./site-header/site-header";

@@ -7,18 +7,23 @@ import {
     SiteTitle,
     SiteCount,
     SiteCard,
-    SiteAtom,
+    SiteIsotype,
+    SiteHeader,
 } from "./components";
 import imgStep1 from "./assets/step-1.svg";
 import imgStep2 from "./assets/step-2.svg";
 import imgStep3 from "./assets/step-3.svg";
 import imgStep4 from "./assets/step-4.svg";
 import imgAtom from "./assets/atom.svg";
+import imgLogo from "./assets/logo.svg";
 
 function site() {
     return (
         <host shadowDom>
-            <SiteSlide></SiteSlide>
+            <SiteHeader>
+                <img src={imgLogo} slot="logo" />
+            </SiteHeader>
+            <SiteIsotype></SiteIsotype>
             <SiteSection>
                 <SiteTitle>
                     <h1>

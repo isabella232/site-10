@@ -22,14 +22,15 @@
         "create": "scaff templates/component src"
     },
     "dependencies": {
+        "@atomico/hooks": "^3.43.1",
         "atomico": "latest"
     },
     "devDependencies": {
         "@atomico/exports": "latest",
+        "@atomico/postcss-tokens": "latest",
         "@atomico/scaffold": "latest",
         "@atomico/tsconfig": "1.0.0",
         "@atomico/vite": "latest",
-        "@atomico/postcss-tokens": "latest",
         "happy-dom": "latest",
         "vite": "latest",
         "vitest": "latest"
