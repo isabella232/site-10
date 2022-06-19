@@ -27,7 +27,7 @@ siteSection.styles = [
     tokens,
     css`
         :host {
-            --gap: var(--size-7);
+            --gap: var(--size-8);
             --padding: var(--size-8) var(--size-4);
             display: block;
             padding: var(--padding);
@@ -42,6 +42,11 @@ siteSection.styles = [
         }
         .content {
             grid-area: content;
+        }
+        .grid.left,
+        .grid.right,
+        .grid.content {
+            gap: var(--size-5);
         }
         .grid {
             display: grid;

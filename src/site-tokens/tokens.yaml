@@ -1,10 +1,12 @@
 color:
-    background: "#0A0024"
-    title: "#ABFFFC"
+    background: "#03000C"
+    title: "#fff"
     subtitle: "#fff"
     text: "rgba(255,255,255,.75)"
-    bgcard: rgba(255,255,255,.05)
-    brcard: rgba(255,255,255,.1)
+    accent: "#FF0099"
+    card:
+        background: rgba(255,255,255,.05)
+        border: rgba(255,255,255,.1)
 maxwidth: 1080px
 size:
     "1": 4px
@@ -13,11 +15,15 @@ size:
     "4": 16px
     "5": 20px
     "6": 32px
-    "7": 60px
-    "8": 80px
-    "9": 120px
+    "7": 44px
+    "8": 60px
+    "9": 80px
+    "10": 120px
 font:
     line:
         text: "1.8"
         title: "1.3"
-    bold: 600
+    weight:
+        title: 600
+        text: 300
+        bold: 500

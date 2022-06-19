@@ -28,8 +28,8 @@ siteCard.styles = [
             --dot-size: var(--size-2);
             --dot-transition: 1s ease all;
             padding: var(--padding);
-            background: var(--color-bgcard);
-            border: 1px solid var(--color-brcard);
+            background: var(--color-card-background);
+            border: 1px solid var(--color-card-border);
             box-sizing: border-box;
             border-radius: var(--radius);
             overflow: hidden;

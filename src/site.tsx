@@ -16,6 +16,9 @@ import imgStep3 from "./assets/step-3.svg";
 import imgStep4 from "./assets/step-4.svg";
 import imgAtom from "./assets/atom.svg";
 import imgLogo from "./assets/logo.svg";
+import iconWatch from "./assets/icon-watch.svg";
+import iconShadow from "./assets/icon-shadow.svg";
+import iconFunction from "./assets/icon-function.svg";
 
 function site() {
     return (
@@ -26,19 +29,34 @@ function site() {
             <SiteIsotype></SiteIsotype>
             <SiteSection>
                 <SiteTitle>
-                    <h1>
-                        Atomico today is an ecosystem agnostic of solutions that
-                        to improve the distribution and communication of
-                        webcomponents
-                    </h1>
+                    <h1>Simple, fast and light</h1>
                 </SiteTitle>
                 <SiteText>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laboriosam harum doloribus dignissimos, quaerat veniam quam
-                    incidunt delectus omnis enim voluptates consequuntur
-                    aspernatur hic eligendi quisquam corrupti voluptate, odit
-                    amet! Enim.
+                    ullamco culpa duis excepteur quis amet
+                    <strong> ad proident Lorem </strong>
+                    esse eu labore excepteur anim deserunt occaecat veniam dolor
+                    enim ullamco qui dolor ad reprehenderit irure dolor Lorem
+                    sunt magna et pariatur eu irure amet enim sit magna dolor ad
+                    et aliquip ut labore culpa ad
                 </SiteText>
+                <div class="icon-row">
+                    <img src={iconFunction} alt="" />
+                    <SiteText>
+                        Ullamco culpa duis excepteur quis amet ad{" "}
+                    </SiteText>
+                </div>
+                <div class="icon-row">
+                    <img src={iconShadow} alt="" />
+                    <SiteText>
+                        Ullamco culpa duis excepteur quis amet ad{" "}
+                    </SiteText>
+                </div>
+                <div class="icon-row">
+                    <img src={iconWatch} alt="" />
+                    <SiteText>
+                        Ullamco culpa duis excepteur quis amet ad{" "}
+                    </SiteText>
+                </div>
                 <div slot="right" class="steps">
                     <div class="step">
                         <SiteCount color="#FF0099" value={1}>
@@ -76,17 +94,19 @@ function site() {
             </SiteSection>
             <SiteSection>
                 <SiteTitle>
-                    <h1>
-                        Atomico today is an ecosystem agnostic of solutions that
-                        to improve the distribution and communication of
-                        webcomponents
-                    </h1>
+                    <h1>The Atomico Ecosystem</h1>
                 </SiteTitle>
+                <SiteText>
+                    ullamco culpa duis excepteur quis amet ad proident Lorem
+                    esse eu labore excepteur anim deserunt{" "}
+                    <strong>occaecat veniam dolor</strong>
+                    sunt magna
+                </SiteText>
                 <img slot="right" src={imgAtom} />
                 <div class="cards" slot="content">
                     <SiteCard dotColor="#FFE600">
                         <SiteText color="subtitle">
-                            <strong>@atomico/exports</strong>
+                            <h4>@atomico/exports</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -97,7 +117,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#0088FF">
                         <SiteText color="subtitle">
-                            <strong>@atomico/router</strong>
+                            <h4>@atomico/router</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -108,7 +128,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#00FF90">
                         <SiteText color="subtitle">
-                            <strong>@atomico/store</strong>
+                            <h4>@atomico/store</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -119,7 +139,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#00FF90">
                         <SiteText color="subtitle">
-                            <strong>@atomico/hooks</strong>
+                            <h4>@atomico/hooks</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -130,7 +150,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#00FF90">
                         <SiteText color="subtitle">
-                            <strong>@atomico/react</strong>
+                            <h4>@atomico/react</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -141,7 +161,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#00FF90">
                         <SiteText color="subtitle">
-                            <strong>@atomico/router</strong>
+                            <h4>@atomico/router</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -152,7 +172,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#00FF90">
                         <SiteText color="subtitle">
-                            <strong>@atomico/components</strong>
+                            <h4>@atomico/components</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -163,7 +183,7 @@ function site() {
                     </SiteCard>
                     <SiteCard dotColor="#00FF90">
                         <SiteText color="subtitle">
-                            <strong>@atomico/ui</strong>
+                            <h4>@atomico/ui</h4>
                         </SiteText>
                         <SiteText>
                             <small>
@@ -173,6 +193,26 @@ function site() {
                         </SiteText>
                     </SiteCard>
                 </div>
+            </SiteSection>
+            <SiteSection>
+                <SiteTitle>
+                    <h1>Ideas, projects and companies that use Atomico</h1>
+                </SiteTitle>
+                <SiteText>
+                    ullamco culpa duis excepteur quis amet ad proident Lorem
+                    esse eu labore excepteur anim deserunt{" "}
+                    <strong>occaecat veniam dolor</strong>
+                    sunt magna
+                </SiteText>
+            </SiteSection>
+            <SiteSection>
+                <SiteTitle>
+                    <h1>Join the community</h1>
+                </SiteTitle>
+                <SiteText>
+                    Atomico simplifies learning, workflow, and maintenance when
+                    creating webcomponents.
+                </SiteText>
             </SiteSection>
         </host>
     );
@@ -197,6 +237,12 @@ site.styles = [
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--size-6);
+        }
+        .icon-row {
+            display: grid;
+            align-items: center;
+            grid-template-columns: auto 1fr;
+            gap: var(--size-4);
         }
     `,
 ];

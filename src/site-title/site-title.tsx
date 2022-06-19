@@ -13,7 +13,7 @@ function siteTitle({ size }: Props<typeof siteTitle>) {
 siteTitle.props = {
     size: {
         type: Number,
-        value: 6,
+        value: 7,
     },
 };
 
@@ -23,6 +23,7 @@ siteTitle.styles = [
         :host {
             color: var(--color-title);
             line-height: var(--font-line-title);
+            font-weight: var(--font-weight-title);
         }
         ::slotted(*) {
             font-size: var(--font-size);
