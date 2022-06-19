@@ -1,4 +1,4 @@
-import { c, css } from "atomico";
+import { Props, c, css } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 
 function siteButton() {
@@ -9,17 +9,22 @@ function siteButton() {
     );
 }
 
-siteButton.props = {
-    myProp: String
-};
+siteButton.props = {};
 
 siteButton.styles = [
     tokens,
     css`
         :host {
-            display: block;
+            display: grid;
+            border: var(--button-border-width) solid var(--button-border-color);
+            border-radius: var(--button-border-radius);
+            justify-content: center;
+            align-items: center;
+            gap: var(--button-gap);
+            grid-template-columns: auto auto;
+            padding: var(--button-padding);
         }
-    `
+    `,
 ];
 
 export const SiteButton = c(siteButton);

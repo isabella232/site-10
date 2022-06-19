@@ -1,12 +1,11 @@
-import { useHost, DOMEvent, useRef } from "atomico";
+import { DOMEvent, Ref, useRef } from "atomico";
 import { useListener } from "@atomico/hooks/use-listener";
 import { useDebounceState } from "@atomico/hooks/use-debounce-state";
 
-export function useMouseMove() {
-    const host = useHost();
+export function useMouseMove(host: Ref) {
     const refWindow = useRef(globalThis);
     const [state, setState] = useDebounceState<{ x: number; y: number }>(
-        10,
+        1,
         {
             x: 0,
             y: 0,
@@ -45,9 +44,15 @@ export function useMouseMove() {
             pageX,
             pageY,
         }: DOMEvent<HTMLElement, MouseEvent>) => {
-            const { clientWidth, clientHeight } = currentTarget;
+            const {
+                innerWidth,
+                innerHeight,
+                clientWidth = innerWidth,
+                clientHeight = innerHeight,
+            } = currentTarget;
             const centerX = clientWidth / 2;
             const centerY = clientHeight / 2;
+
             const x =
                 pageX > centerX
                     ? (pageX - centerX) / centerX

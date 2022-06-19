@@ -1,10 +1,42 @@
-import { c, css } from "atomico";
+import { c, css, useHost } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 import { useMouseMove } from "./hooks";
+
 function siteIsotype() {
-    const state = useMouseMove();
+    const host = useHost();
+    const state = useMouseMove(host);
     return (
         <host shadowDom>
+            <div class="atom-orbe" style="--orbe-size: 1.5; opacity:.5">
+                <div
+                    class="orbe"
+                    ref={(ref) => {
+                        ref.style.transform = `translate(${state.x * -50}px,${
+                            state.y * -50
+                        }px)`;
+                    }}
+                ></div>
+            </div>
+            <div class="atom-orbe" style="--orbe-size: 2; opacity:.35">
+                <div
+                    class="orbe"
+                    ref={(ref) => {
+                        ref.style.transform = `translate(${state.x * -100}px,${
+                            state.y * -100
+                        }px)`;
+                    }}
+                ></div>
+            </div>
+            <div class="atom-orbe" style="--orbe-size: 2.5; opacity:.15">
+                <div
+                    class="orbe"
+                    ref={(ref) => {
+                        ref.style.transform = `translate(${state.x * -150}px,${
+                            state.y * -150
+                        }px)`;
+                    }}
+                ></div>
+            </div>
             <div class="atom-group">
                 <div class="atom atom-0"></div>
                 <div
@@ -59,6 +91,7 @@ siteIsotype.styles = [
             position: relative;
             font-size: 1.8vh;
             color: var(--color-primary-contrast);
+            --figure-size: 24.75em;
         }
 
         .atom-content {
@@ -83,9 +116,12 @@ siteIsotype.styles = [
             background: var(--background);
             transition: 1s linear all;
         }
+        .orbe {
+            transition: 0.5s linear all;
+        }
         .atom-group {
-            width: 24.75em;
-            height: 24.75em;
+            width: var(--figure-size);
+            height: var(--figure-size);
             margin: auto;
             position: relative;
         }
@@ -127,6 +163,21 @@ siteIsotype.styles = [
             top: -8%;
             left: 60%;
             transition: 0.5s linear all;
+        }
+        .atom-orbe {
+            position: absolute;
+            width: calc(var(--figure-size) * var(--orbe-size));
+            height: calc(var(--figure-size) * var(--orbe-size));
+            opacity: var(--opacity);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .orbe {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 2px solid var(--color-orbe);
         }
     `,
 ];

@@ -1,6 +1,7 @@
 import { c, css } from "atomico";
 import {
     tokens,
+    SiteGrid,
     SiteSection,
     SiteSlide,
     SiteText,
@@ -9,6 +10,8 @@ import {
     SiteCard,
     SiteIsotype,
     SiteHeader,
+    SiteButton,
+    SiteAuthor,
 } from "./components";
 import imgStep1 from "./assets/step-1.svg";
 import imgStep2 from "./assets/step-2.svg";
@@ -16,9 +19,15 @@ import imgStep3 from "./assets/step-3.svg";
 import imgStep4 from "./assets/step-4.svg";
 import imgAtom from "./assets/atom.svg";
 import imgLogo from "./assets/logo.svg";
+import imgLogoText from "./assets/logo-text.svg";
+import imgAuthor from "./assets/author.jpg";
+import imgByUppercod from "./assets/by-uppercod.svg";
 import iconWatch from "./assets/icon-watch.svg";
 import iconShadow from "./assets/icon-shadow.svg";
 import iconFunction from "./assets/icon-function.svg";
+import iconDiscord from "./assets/icon-discord.svg";
+import iconLinkedin from "./assets/icon-linkedin.svg";
+import iconTwitter from "./assets/icon-twitter.svg";
 
 function site() {
     return (
@@ -26,7 +35,16 @@ function site() {
             <SiteHeader>
                 <img src={imgLogo} slot="logo" />
             </SiteHeader>
-            <SiteIsotype></SiteIsotype>
+            <SiteIsotype>
+                <SiteGrid gap={3} centered>
+                    <img src={imgLogoText} alt="" />
+                    <SiteText elegant>WEBCOMPONENTS</SiteText>
+                    <SiteText textCenter>
+                        Create interfaces with code
+                        <br /> simple, fast and light
+                    </SiteText>
+                </SiteGrid>
+            </SiteIsotype>
             <SiteSection>
                 <SiteTitle>
                     <h1>Simple, fast and light</h1>
@@ -42,19 +60,19 @@ function site() {
                 <div class="icon-row">
                     <img src={iconFunction} alt="" />
                     <SiteText>
-                        Ullamco culpa duis excepteur quis amet ad{" "}
+                        Ullamco culpa duis excepteur quis amet ad
                     </SiteText>
                 </div>
                 <div class="icon-row">
                     <img src={iconShadow} alt="" />
                     <SiteText>
-                        Ullamco culpa duis excepteur quis amet ad{" "}
+                        Ullamco culpa duis excepteur quis amet ad
                     </SiteText>
                 </div>
                 <div class="icon-row">
                     <img src={iconWatch} alt="" />
                     <SiteText>
-                        Ullamco culpa duis excepteur quis amet ad{" "}
+                        Ullamco culpa duis excepteur quis amet ad
                     </SiteText>
                 </div>
                 <div slot="right" class="steps">
@@ -103,7 +121,7 @@ function site() {
                     sunt magna
                 </SiteText>
                 <img slot="right" src={imgAtom} />
-                <div class="cards" slot="content">
+                <SiteGrid slot="content" columns="1, 2 768px, 3 980px">
                     <SiteCard dotColor="#FFE600">
                         <SiteText color="subtitle">
                             <h4>@atomico/exports</h4>
@@ -192,7 +210,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                </div>
+                </SiteGrid>
             </SiteSection>
             <SiteSection>
                 <SiteTitle>
@@ -213,6 +231,47 @@ function site() {
                     Atomico simplifies learning, workflow, and maintenance when
                     creating webcomponents.
                 </SiteText>
+                <SiteGrid columns="1, 3 768px">
+                    <SiteButton style="--button-border-color: #404EED">
+                        <img src={iconDiscord} /> Discord
+                    </SiteButton>
+                    <SiteButton style="--button-border-color: #1DB0F2">
+                        <img src={iconTwitter} /> Twitter
+                    </SiteButton>
+                    <SiteButton style="--button-border-color: #0063B9">
+                        <img src={iconLinkedin} /> Linkedin
+                    </SiteButton>
+                </SiteGrid>
+            </SiteSection>
+            <SiteSection>
+                <SiteAuthor>
+                    <img src={imgAuthor} />
+                </SiteAuthor>
+                <SiteGrid slot="right" gap={1}>
+                    <SiteText elegant>AUTHOR'S MESSAGE</SiteText>
+                    <SiteTitle>
+                        <h1>Join Atomico JS</h1>
+                    </SiteTitle>
+                </SiteGrid>
+                <SiteText slot="right">
+                    Atomico is an open source project developed by{" "}
+                    <a href="">UpperCod</a>, we invite you to contribute to the
+                    improvement of Atomico in:
+                </SiteText>
+                <SiteText slot="right">Using and sharing Atomico</SiteText>
+                <SiteText slot="right">
+                    Improving the documentation and requesting new topics to
+                    document
+                </SiteText>
+                <SiteText slot="right">
+                    Improving the source code, sharing bugs and new features
+                </SiteText>
+                <SiteText slot="right">Small donations</SiteText>
+            </SiteSection>
+            <SiteSection>
+                <SiteGrid centered slot="content">
+                    <img src={imgByUppercod} alt="" />
+                </SiteGrid>
             </SiteSection>
         </host>
     );
@@ -232,11 +291,6 @@ site.styles = [
         .step-img {
             width: 100%;
             max-width: 380px;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--size-6);
         }
         .icon-row {
             display: grid;
