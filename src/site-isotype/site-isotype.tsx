@@ -1,9 +1,9 @@
-import { c, css, useHost } from "atomico";
+import { c, css, useHost, useRef } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 import { useMouseMove } from "./hooks";
 
 function siteIsotype() {
-    const host = useHost();
+    const host = useRef(window);
     const state = useMouseMove(host);
     return (
         <host shadowDom>

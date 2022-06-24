@@ -3,6 +3,7 @@ import {
     tokens,
     SiteGrid,
     SiteSection,
+    SiteLink,
     SiteSlide,
     SiteText,
     SiteTitle,
@@ -34,6 +35,10 @@ function site() {
         <host shadowDom>
             <SiteHeader>
                 <img src={imgLogo} slot="logo" />
+                <SiteLink slot="link">Github</SiteLink>
+                <SiteLink slot="link">Documentation</SiteLink>
+                <SiteLink slot="link">Support</SiteLink>
+                <img src={imgLogo} slot="action" />
             </SiteHeader>
             <SiteIsotype>
                 <SiteGrid gap={3} centered>

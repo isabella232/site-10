@@ -1,39 +1,43 @@
-import { c, css, useHost } from "atomico";
+import { c, css, useRef, useHost } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 import { useMouseMove } from "../site-isotype/hooks";
 
 function siteAuthor() {
-    const host = useHost();
+    const host = useRef(window);
     const state = useMouseMove(host);
-    console.log(state);
     return (
         <host shadowDom>
             <slot></slot>
             <style>
                 {`:host{
-                    --percent-x: ${state.x};
-                    --percent-y: ${state.y};
+                    --percent-x: ${state.x + 1};
+                    --percent-y: ${state.y + 1};
                 }`}
             </style>
         </host>
     );
 }
 
-siteAuthor.props = {
-    myProp: String,
-};
-
 siteAuthor.styles = [
     tokens,
     css`
         :host {
             display: block;
+            --color-1: rgba(0, 255, 144, 0.25);
+            --color-2: rgb(214, 0, 255, 0.5);
+            --size: 80px;
+            --blur: 100vh;
         }
         ::slotted(*) {
-            transition: 2s linear;
-            box-shadow: calc(120px * var(--percent-x))
-                    calc(120px * var(--percent-y)) 200px red,
-                -120px -120px 200px teal;
+            max-width: 100%;
+            border-radius: var(--size-2);
+            transition: 1s linear;
+            box-shadow: calc(var(--size) * var(--percent-x))
+                    calc(var(--size) * var(--percent-y)) var(--blur)
+                    var(--color-1),
+                calc(var(--size) * -1 * var(--percent-x))
+                    calc(var(--size) * -1 * var(--percent-y)) var(--blur)
+                    var(--color-2);
         }
     `,
 ];

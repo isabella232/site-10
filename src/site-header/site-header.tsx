@@ -8,11 +8,11 @@ function siteHeader() {
                 <div>
                     <slot name="logo"></slot>
                 </div>
-                <div>
+                <div class="links">
                     <slot name="link"></slot>
                 </div>
-                <div>
-                    <slot name="icon"></slot>
+                <div class="actions">
+                    <slot name="action"></slot>
                 </div>
             </div>
         </host>
@@ -27,6 +27,7 @@ siteHeader.styles = [
     tokens,
     css`
         :host {
+            --width-between: 200px;
             --padding: var(--size-5) var(--size-4);
             width: 100%;
             display: block;
@@ -42,6 +43,17 @@ siteHeader.styles = [
             display: grid;
             margin: 0px auto;
             max-width: var(--maxwidth);
+            display: grid;
+            align-items: center;
+            grid-template-columns: var(--width-between) 1fr var(--width-between);
+        }
+        .links {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .actions {
         }
     `,
 ];

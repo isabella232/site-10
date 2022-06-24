@@ -11,3 +11,4 @@ export * from "./site-header/site-header";
 export * from "./site-button/site-button";
 export * from "./site-grid/site-grid";
 export * from "./site-author/site-author";
+export * from "./site-link/site-link";

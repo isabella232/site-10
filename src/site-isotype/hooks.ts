@@ -1,6 +1,7 @@
-import { DOMEvent, Ref, useRef } from "atomico";
+import { DOMEvent, Ref, useRef, useState } from "atomico";
 import { useListener } from "@atomico/hooks/use-listener";
 import { useDebounceState } from "@atomico/hooks/use-debounce-state";
+import { useIntersectionObserver } from "@atomico/hooks/use-intersection-observer";
 
 export function useMouseMove(host: Ref) {
     const refWindow = useRef(globalThis);
@@ -13,14 +14,17 @@ export function useMouseMove(host: Ref) {
         "fps"
     );
 
+    const [intersectio, setIntersection] = useState(false);
+
+    useIntersectionObserver(([{ isIntersecting }]) =>
+        setIntersection(isIntersecting)
+    );
+
     useListener(
         refWindow,
         "deviceorientation",
-        ({
-            beta,
-            alpha,
-            gamma,
-        }: DOMEvent<HTMLElement, DeviceOrientationEvent>) => {
+        ({ beta, gamma }: DOMEvent<HTMLElement, DeviceOrientationEvent>) => {
+            if (!intersectio) return;
             if (!refWindow.start) {
                 refWindow.start = { beta, gamma };
             }
@@ -41,27 +45,37 @@ export function useMouseMove(host: Ref) {
         "mousemove",
         ({
             currentTarget,
-            pageX,
-            pageY,
-        }: DOMEvent<HTMLElement, MouseEvent>) => {
+            clientX,
+            clientY,
+        }: DOMEvent<
+            HTMLElement & { innerWidth?: number; innerHeight?: number },
+            MouseEvent
+        >) => {
+            if (!intersectio) return;
             const {
                 innerWidth,
                 innerHeight,
                 clientWidth = innerWidth,
                 clientHeight = innerHeight,
             } = currentTarget;
-            const centerX = clientWidth / 2;
-            const centerY = clientHeight / 2;
+            let centerX = clientWidth / 2;
+            let centerY = clientHeight / 2;
+
+            if (currentTarget.getBoundingClientRect) {
+                const rect = currentTarget.getBoundingClientRect();
+                clientX -= rect.x;
+                clientY -= rect.y;
+            }
 
             const x =
-                pageX > centerX
-                    ? (pageX - centerX) / centerX
-                    : (1 - pageX / centerX) * -1;
+                clientX > centerX
+                    ? (clientX - centerX) / centerX
+                    : (1 - clientX / centerX) * -1;
 
             const y =
-                pageY > centerY
-                    ? (pageY - centerY) / centerY
-                    : (1 - pageY / centerY) * -1;
+                clientY > centerY
+                    ? (clientY - centerY) / centerY
+                    : (1 - clientY / centerY) * -1;
 
             setState({ x, y });
         },
