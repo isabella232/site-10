@@ -1,11 +1,15 @@
-import { c, css } from "atomico";
+import { c, css, useRef } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
+import { useResizeObserverState } from "@atomico/hooks/use-resize-observer";
 
 function siteHeader() {
+    const refLogo = useRef();
+    const rect = useResizeObserverState(refLogo);
+
     return (
         <host shadowDom>
             <div class="layout">
-                <div>
+                <div ref={refLogo}>
                     <slot name="logo"></slot>
                 </div>
                 <div class="links">
@@ -15,6 +19,12 @@ function siteHeader() {
                     <slot name="action"></slot>
                 </div>
             </div>
+            <style>
+                {rect?.width &&
+                    `:host{
+                --width-between: ${rect.width}px;
+            }`}
+            </style>
         </host>
     );
 }
@@ -28,7 +38,7 @@ siteHeader.styles = [
     css`
         :host {
             --width-between: 200px;
-            --padding: var(--size-5) var(--size-4);
+            --padding: var(--size-7) var(--size-4);
             width: 100%;
             display: block;
             position: absolute;
@@ -54,6 +64,9 @@ siteHeader.styles = [
             justify-content: center;
         }
         .actions {
+            display: flex;
+            align-items: center;
+            justify-content: end;
         }
     `,
 ];

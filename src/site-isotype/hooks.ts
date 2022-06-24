@@ -58,8 +58,8 @@ export function useMouseMove(host: Ref) {
                 clientWidth = innerWidth,
                 clientHeight = innerHeight,
             } = currentTarget;
-            let centerX = clientWidth / 2;
-            let centerY = clientHeight / 2;
+            const centerX = clientWidth / 2;
+            const centerY = clientHeight / 2;
 
             if (currentTarget.getBoundingClientRect) {
                 const rect = currentTarget.getBoundingClientRect();

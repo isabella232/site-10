@@ -22,7 +22,7 @@
         "create": "scaff templates/component src"
     },
     "dependencies": {
-        "@atomico/hooks": "^3.44.0",
+        "@atomico/hooks": "^3.45.0",
         "atomico": "latest"
     },
     "devDependencies": {

@@ -1,10 +1,10 @@
 import { c, css, useRef, useHost } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
-import { useMouseMove } from "../site-isotype/hooks";
+import { useParallax } from "@atomico/hooks/use-parallax";
 
 function siteAuthor() {
     const host = useRef(window);
-    const state = useMouseMove(host);
+    const state = useParallax(host);
     return (
         <host shadowDom>
             <slot></slot>
