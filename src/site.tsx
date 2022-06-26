@@ -339,7 +339,6 @@ site.styles = [
             opacity: 0.5;
         }
         .menu {
-            padding: 150px 0px;
             min-height: 100%;
             box-sizing: border-box;
             display: flex;
