@@ -14,3 +14,4 @@ export * from "./site-author/site-author";
 export * from "./site-link/site-link";
 export * from "./site-menu/site-menu";
 export * from "./site-eye/site-eye";
+export * from "./site-footer/site-footer";

@@ -55,6 +55,7 @@ siteHeader.styles = [
             max-width: var(--maxwidth);
             display: grid;
             align-items: center;
+            justify-content: space-between;
             grid-template-columns: var(--width-between) 1fr var(--width-between);
         }
         .links {
@@ -67,6 +68,14 @@ siteHeader.styles = [
             display: flex;
             align-items: center;
             justify-content: end;
+        }
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: auto auto;
+            }
+            .links {
+                display: none;
+            }
         }
     `,
 ];

@@ -62,6 +62,14 @@ siteSection.styles = [
                 "left right" auto
                 "content content" auto / 1fr 1fr;
         }
+        @media (max-width: 768px) {
+            .layout {
+                grid-template:
+                    "left" auto
+                    "right" auto
+                    "content" auto / 1fr;
+            }
+        }
     `,
 ];
 

@@ -179,6 +179,12 @@ siteIsotype.styles = [
             border-radius: 100%;
             border: 2px solid var(--color-orbe);
         }
+
+        @media (max-width: 768px) {
+            :host {
+                --figure-size: 70vw;
+            }
+        }
     `,
 ];
 

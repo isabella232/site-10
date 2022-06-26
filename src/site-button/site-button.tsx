@@ -23,6 +23,7 @@ siteButton.styles = [
             gap: var(--button-gap);
             grid-template-columns: auto auto;
             padding: var(--button-padding);
+            cursor: pointer;
         }
     `,
 ];

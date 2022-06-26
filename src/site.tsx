@@ -14,6 +14,7 @@ import {
     SiteAuthor,
     SiteMenu,
     SiteEye,
+    SiteFooter,
 } from "./components";
 import imgStep1 from "./assets/step-1.svg";
 import imgStep2 from "./assets/step-2.svg";
@@ -301,11 +302,12 @@ function site() {
                 </SiteText>
                 <SiteText slot="right">Small donations</SiteText>
             </SiteSection>
-            <SiteSection>
-                <SiteGrid centered slot="content">
-                    <img src={imgByUppercod} alt="" />
-                </SiteGrid>
-            </SiteSection>
+            <SiteFooter>
+                <img slot="logo" src={imgByUppercod} />
+                <SiteLink>Twitter</SiteLink>
+                <SiteLink>Discord</SiteLink>
+                <SiteLink>Github</SiteLink>
+            </SiteFooter>
         </host>
     );
 }
@@ -313,6 +315,9 @@ function site() {
 site.styles = [
     tokens,
     css`
+        img {
+            max-width: 100%;
+        }
         .steps {
             display: grid;
             gap: var(--size-6);
@@ -346,6 +351,7 @@ site.styles = [
         }
         .menu-items {
             display: flex;
+            flex-flow: row wrap;
             gap: 1em;
         }
         .menu-group {
