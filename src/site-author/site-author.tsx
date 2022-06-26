@@ -1,4 +1,4 @@
-import { c, css, useRef, useHost } from "atomico";
+import { c, css, useRef } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 import { useParallax } from "@atomico/hooks/use-parallax";
 

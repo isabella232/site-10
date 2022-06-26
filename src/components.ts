@@ -12,3 +12,5 @@ export * from "./site-button/site-button";
 export * from "./site-grid/site-grid";
 export * from "./site-author/site-author";
 export * from "./site-link/site-link";
+export * from "./site-menu/site-menu";
+export * from "./site-eye/site-eye";

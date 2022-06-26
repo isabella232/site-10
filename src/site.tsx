@@ -4,7 +4,6 @@ import {
     SiteGrid,
     SiteSection,
     SiteLink,
-    SiteSlide,
     SiteText,
     SiteTitle,
     SiteCount,
@@ -13,6 +12,8 @@ import {
     SiteHeader,
     SiteButton,
     SiteAuthor,
+    SiteMenu,
+    SiteEye,
 } from "./components";
 import imgStep1 from "./assets/step-1.svg";
 import imgStep2 from "./assets/step-2.svg";
@@ -38,7 +39,34 @@ function site() {
                 <SiteLink slot="link">Github</SiteLink>
                 <SiteLink slot="link">Documentation</SiteLink>
                 <SiteLink slot="link">Support</SiteLink>
-                <img src={imgLogo} slot="action" />
+                <SiteMenu slot="action">
+                    <SiteEye class="eye"></SiteEye>
+                    <div class="menu">
+                        <div class="menu-group">
+                            <SiteText elegant>SOCIALS</SiteText>
+                            <div class="menu-items">
+                                <SiteLink>TWITTER</SiteLink>
+                                <SiteLink>LINKEDIN</SiteLink>
+                                <SiteLink>DISCORD</SiteLink>
+                                <SiteLink>GITHUB</SiteLink>
+                            </div>
+                            <SiteText elegant>STARTED</SiteText>
+                            <div class="menu-items">
+                                <SiteLink>Get started</SiteLink>
+                                <SiteLink>Template</SiteLink>
+                                <SiteLink>Props</SiteLink>
+                                <SiteLink>Hooks</SiteLink>
+                            </div>
+                            <SiteText elegant>UTILITIES</SiteText>
+                            <div class="menu-items">
+                                <SiteLink>@atomico/exports</SiteLink>
+                                <SiteLink>@atomico/ui</SiteLink>
+                                <SiteLink>@atomico/hooks</SiteLink>
+                                <SiteLink>More</SiteLink>
+                            </div>
+                        </div>
+                    </div>
+                </SiteMenu>
             </SiteHeader>
             <SiteIsotype>
                 <SiteGrid gap={3} centered>
@@ -302,6 +330,28 @@ site.styles = [
             align-items: center;
             grid-template-columns: auto 1fr;
             gap: var(--size-4);
+        }
+        .eye {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.5;
+        }
+        .menu {
+            padding: 150px 0px;
+            min-height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-end;
+        }
+        .menu-items {
+            display: flex;
+            gap: 1em;
+        }
+        .menu-group {
+            display: grid;
+            gap: 20px;
         }
     `,
 ];
