@@ -38,7 +38,7 @@ siteHeader.styles = [
     css`
         :host {
             --width-between: 200px;
-            --padding: var(--size-7) var(--size-4);
+            --padding: var(--size-7) var(--size-5);
             width: 100%;
             display: block;
             position: absolute;

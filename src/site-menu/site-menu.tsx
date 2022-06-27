@@ -81,7 +81,7 @@ siteMenu.styles = [
             display: block;
             --top: 100vh;
             --opacity: 0;
-            --delay: 0.5s;
+            --delay: 1s;
         }
         :host([show]) {
             --top: 0vh;
@@ -95,7 +95,7 @@ siteMenu.styles = [
             top: var(--top);
             left: 0px;
             background: var(--color-background);
-            transition: top 0s var(--delay), opacity 0.5s ease;
+            transition: top 0s var(--delay), opacity 1s ease;
             opacity: var(--opacity);
         }
         .content-inner {

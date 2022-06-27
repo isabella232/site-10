@@ -28,7 +28,7 @@ siteSection.styles = [
     css`
         :host {
             --gap: var(--size-8);
-            --padding: var(--size-8) var(--size-4);
+            --padding: var(--size-8) var(--size-5);
             display: block;
             padding: var(--padding);
             background: var(--color-background);
