@@ -1,11 +1,6 @@
 {
-    "name": "atomico-base",
-    "description": "a repo to start with atomico",
-    "meta": {
-        "title": "Started - Atomico + Vite(JS,JSX,TS,TSX)",
-        "description": "Hassle-free starter template, perfect for starting with Atomico",
-        "branch": "https://github.com/atomicojs/atomico/tree/2-started/"
-    },
+    "name": "@atomico/site",
+    "description": "Atomico site Components",
     "workspaces": [
         "src/*"
     ],
@@ -17,8 +12,8 @@
         "build": "vite build",
         "test": "vitest",
         "coverage": "vitest run --coverage",
-        "exports": "exports src/components.js --exports --types --main components --publish",
-        "prepublishOnly": "npm run coverage",
+        "exports": "exports src/components.js --exports --types --main components",
+        "prepublishOnly": "npm run exports",
         "create": "scaff templates/component src"
     },
     "dependencies": {
