@@ -21,7 +21,7 @@
         "atomico": "latest"
     },
     "devDependencies": {
-        "@atomico/exports": "latest",
+        "@atomico/exports": "^0.34.0",
         "@atomico/postcss-tokens": "latest",
         "@atomico/scaffold": "latest",
         "@atomico/tsconfig": "1.0.0",
