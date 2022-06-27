@@ -3,7 +3,6 @@ import { tokens } from "../site-tokens/site-tokens";
 
 function siteMenu() {
     const [show, setShow] = useProp<boolean>("show");
-    console.log({ show });
     return (
         <host shadowDom>
             <button class="button">
