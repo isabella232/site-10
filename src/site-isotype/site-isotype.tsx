@@ -1,10 +1,10 @@
-import { c, css, useHost, useRef } from "atomico";
+import { c, css, useRef } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
-import { useMouseMove } from "./hooks";
+import { useParallax } from "@atomico/hooks/use-parallax";
 
 function siteIsotype() {
     const host = useRef(globalThis);
-    const state = useMouseMove(host);
+    const state = useParallax(host);
     return (
         <host shadowDom>
             <div class="atom-orbe" style="--orbe-size: 1.5; opacity:.5">
