@@ -4,6 +4,9 @@
     "workspaces": [
         "src/*"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "version": "0.0.0",
     "private": true,
     "type": "module",
