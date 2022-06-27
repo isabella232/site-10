@@ -7,7 +7,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "module",
     "scripts": {
         "start": "vite",
@@ -40,6 +40,19 @@
     "postcss": {
         "plugins": {
             "@atomico/postcss-tokens": {}
+        }
+    },
+    "module": "./dist/components.js",
+    "exports": {
+        "./components": "./dist/components.js",
+        ".": "./dist/components.js"
+    },
+    "types": "types/components.d.ts",
+    "typesVersions": {
+        "*": {
+            "components": [
+                "./types/components.d.ts"
+            ]
         }
     }
 }

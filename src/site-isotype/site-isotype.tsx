@@ -3,7 +3,7 @@ import { tokens } from "../site-tokens/site-tokens";
 import { useMouseMove } from "./hooks";
 
 function siteIsotype() {
-    const host = useRef(window);
+    const host = useRef(globalThis);
     const state = useMouseMove(host);
     return (
         <host shadowDom>

@@ -3,7 +3,7 @@ import { tokens } from "../site-tokens/site-tokens";
 import { useParallax } from "@atomico/hooks/use-parallax";
 
 function siteEye() {
-    const refWindow = useRef(window);
+    const refWindow = useRef(globalThis);
     const state = useParallax(refWindow);
     return (
         <host shadowDom>

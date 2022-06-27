@@ -3,7 +3,7 @@ import { tokens } from "../site-tokens/site-tokens";
 import { useParallax } from "@atomico/hooks/use-parallax";
 
 function siteAuthor() {
-    const host = useRef(window);
+    const host = useRef(globalThis);
     const state = useParallax(host);
     return (
         <host shadowDom>
