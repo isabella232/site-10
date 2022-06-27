@@ -12,7 +12,7 @@
         "build": "vite build",
         "test": "vitest",
         "coverage": "vitest run --coverage",
-        "exports": "exports src/components.js --exports --types --main components",
+        "exports": "exports src/components.ts --exports --types --main components --watch",
         "prepublishOnly": "npm run exports",
         "create": "scaff templates/component src"
     },
@@ -27,6 +27,7 @@
         "@atomico/tsconfig": "1.0.0",
         "@atomico/vite": "latest",
         "happy-dom": "latest",
+        "typescript": "^4.7.4",
         "vite": "latest",
         "vitest": "latest"
     },
