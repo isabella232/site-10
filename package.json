@@ -41,18 +41,5 @@
         "plugins": {
             "@atomico/postcss-tokens": {}
         }
-    },
-    "module": "./dist/components.js",
-    "exports": {
-        "./components": "./dist/components.js",
-        ".": "./dist/components.js"
-    },
-    "types": "types/components.d.ts",
-    "typesVersions": {
-        "*": {
-            "components": [
-                "./types/components.d.ts"
-            ]
-        }
     }
 }
