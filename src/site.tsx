@@ -40,7 +40,13 @@ function site() {
         <host shadowDom>
             <SiteHeader>
                 <img src={imgLogo} slot="logo" />
-                <SiteLink slot="link">Github</SiteLink>
+                <SiteLink
+                    href="https://github.com/atomicojs/atomico/"
+                    target="_blank"
+                    slot="link"
+                >
+                    Github
+                </SiteLink>
                 <SiteLink slot="link">Documentation</SiteLink>
                 <SiteLink slot="link">Support</SiteLink>
                 <SiteMenu slot="action">

@@ -7,7 +7,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "0.0.4",
+    "version": "0.1.0",
     "type": "module",
     "scripts": {
         "start": "vite",
@@ -40,6 +40,223 @@
     "postcss": {
         "plugins": {
             "@atomico/postcss-tokens": {}
+        }
+    },
+    "module": "./dist/components.js",
+    "exports": {
+        "./site-title": "./dist/site-title/site-title.js",
+        "./site-tokens": "./dist/site-tokens/site-tokens.js",
+        "./site-grid": "./dist/site-grid/site-grid.js",
+        "./site-header": "./dist/site-header/site-header.js",
+        "./site-isotype": "./dist/site-isotype/site-isotype.js",
+        "./site-link": "./dist/site-link/site-link.js",
+        "./site-menu": "./dist/site-menu/site-menu.js",
+        "./site-section": "./dist/site-section/site-section.js",
+        "./site-slide": "./dist/site-slide/site-slide.js",
+        "./site-text": "./dist/site-text/site-text.js",
+        "./components": "./dist/components.js",
+        ".": "./dist/components.js",
+        "./site-atom": "./dist/site-atom/site-atom.js",
+        "./site-author": "./dist/site-author/site-author.js",
+        "./site-button": "./dist/site-button/site-button.js",
+        "./site-count": "./dist/site-count/site-count.js",
+        "./site-card": "./dist/site-card/site-card.js",
+        "./site-eye": "./dist/site-eye/site-eye.js",
+        "./site-footer": "./dist/site-footer/site-footer.js",
+        "./site-atom/preact": "./dist/site-atom.preact.js",
+        "./site-atom/react": "./dist/site-atom.react.js",
+        "./site-author/react": "./dist/site-author.react.js",
+        "./site-author/preact": "./dist/site-author.preact.js",
+        "./site-button/preact": "./dist/site-button.preact.js",
+        "./site-button/react": "./dist/site-button.react.js",
+        "./site-count/react": "./dist/site-count.react.js",
+        "./site-count/preact": "./dist/site-count.preact.js",
+        "./site-card/react": "./dist/site-card.react.js",
+        "./site-card/preact": "./dist/site-card.preact.js",
+        "./site-eye/preact": "./dist/site-eye.preact.js",
+        "./site-eye/react": "./dist/site-eye.react.js",
+        "./site-footer/preact": "./dist/site-footer.preact.js",
+        "./site-footer/react": "./dist/site-footer.react.js",
+        "./site-grid/react": "./dist/site-grid.react.js",
+        "./site-grid/preact": "./dist/site-grid.preact.js",
+        "./site-header/preact": "./dist/site-header.preact.js",
+        "./site-header/react": "./dist/site-header.react.js",
+        "./site-isotype/react": "./dist/site-isotype.react.js",
+        "./site-isotype/preact": "./dist/site-isotype.preact.js",
+        "./site-link/preact": "./dist/site-link.preact.js",
+        "./site-link/react": "./dist/site-link.react.js",
+        "./site-menu/preact": "./dist/site-menu.preact.js",
+        "./site-menu/react": "./dist/site-menu.react.js",
+        "./site-section/react": "./dist/site-section.react.js",
+        "./site-section/preact": "./dist/site-section.preact.js",
+        "./site-slide/react": "./dist/site-slide.react.js",
+        "./site-slide/preact": "./dist/site-slide.preact.js",
+        "./site-text/preact": "./dist/site-text.preact.js",
+        "./site-text/react": "./dist/site-text.react.js",
+        "./site-title/preact": "./dist/site-title.preact.js",
+        "./site-title/react": "./dist/site-title.react.js",
+        "./react": "./dist/react.js",
+        "./preact": "./dist/preact.js"
+    },
+    "types": "types/components.d.ts",
+    "typesVersions": {
+        "*": {
+            "components": [
+                "./types/components.d.ts"
+            ],
+            "site-atom": [
+                "./types/site-atom/site-atom.d.ts"
+            ],
+            "site-author": [
+                "./types/site-author/site-author.d.ts"
+            ],
+            "site-button": [
+                "./types/site-button/site-button.d.ts"
+            ],
+            "site-count": [
+                "./types/site-count/site-count.d.ts"
+            ],
+            "site-card": [
+                "./types/site-card/site-card.d.ts"
+            ],
+            "site-eye": [
+                "./types/site-eye/site-eye.d.ts"
+            ],
+            "site-footer": [
+                "./types/site-footer/site-footer.d.ts"
+            ],
+            "site-grid": [
+                "./types/site-grid/site-grid.d.ts"
+            ],
+            "site-header": [
+                "./types/site-header/site-header.d.ts"
+            ],
+            "site-isotype": [
+                "./types/site-isotype/site-isotype.d.ts"
+            ],
+            "site-link": [
+                "./types/site-link/site-link.d.ts"
+            ],
+            "site-menu": [
+                "./types/site-menu/site-menu.d.ts"
+            ],
+            "site-section": [
+                "./types/site-section/site-section.d.ts"
+            ],
+            "site-slide": [
+                "./types/site-slide/site-slide.d.ts"
+            ],
+            "site-text": [
+                "./types/site-text/site-text.d.ts"
+            ],
+            "site-title": [
+                "./types/site-title/site-title.d.ts"
+            ],
+            "site-tokens": [
+                "./types/site-tokens/site-tokens.d.ts"
+            ],
+            "site-atom/preact": [
+                "./types/site-atom.preact.d.ts"
+            ],
+            "site-atom/react": [
+                "./types/site-atom.react.d.ts"
+            ],
+            "site-author/react": [
+                "./types/site-author.react.d.ts"
+            ],
+            "site-author/preact": [
+                "./types/site-author.preact.d.ts"
+            ],
+            "site-button/preact": [
+                "./types/site-button.preact.d.ts"
+            ],
+            "site-button/react": [
+                "./types/site-button.react.d.ts"
+            ],
+            "site-count/react": [
+                "./types/site-count.react.d.ts"
+            ],
+            "site-count/preact": [
+                "./types/site-count.preact.d.ts"
+            ],
+            "site-card/react": [
+                "./types/site-card.react.d.ts"
+            ],
+            "site-card/preact": [
+                "./types/site-card.preact.d.ts"
+            ],
+            "site-eye/preact": [
+                "./types/site-eye.preact.d.ts"
+            ],
+            "site-eye/react": [
+                "./types/site-eye.react.d.ts"
+            ],
+            "site-footer/preact": [
+                "./types/site-footer.preact.d.ts"
+            ],
+            "site-footer/react": [
+                "./types/site-footer.react.d.ts"
+            ],
+            "site-grid/react": [
+                "./types/site-grid.react.d.ts"
+            ],
+            "site-grid/preact": [
+                "./types/site-grid.preact.d.ts"
+            ],
+            "site-header/preact": [
+                "./types/site-header.preact.d.ts"
+            ],
+            "site-header/react": [
+                "./types/site-header.react.d.ts"
+            ],
+            "site-isotype/react": [
+                "./types/site-isotype.react.d.ts"
+            ],
+            "site-isotype/preact": [
+                "./types/site-isotype.preact.d.ts"
+            ],
+            "site-link/preact": [
+                "./types/site-link.preact.d.ts"
+            ],
+            "site-link/react": [
+                "./types/site-link.react.d.ts"
+            ],
+            "site-menu/preact": [
+                "./types/site-menu.preact.d.ts"
+            ],
+            "site-menu/react": [
+                "./types/site-menu.react.d.ts"
+            ],
+            "site-section/react": [
+                "./types/site-section.react.d.ts"
+            ],
+            "site-section/preact": [
+                "./types/site-section.preact.d.ts"
+            ],
+            "site-slide/react": [
+                "./types/site-slide.react.d.ts"
+            ],
+            "site-slide/preact": [
+                "./types/site-slide.preact.d.ts"
+            ],
+            "site-text/preact": [
+                "./types/site-text.preact.d.ts"
+            ],
+            "site-text/react": [
+                "./types/site-text.react.d.ts"
+            ],
+            "site-title/preact": [
+                "./types/site-title.preact.d.ts"
+            ],
+            "site-title/react": [
+                "./types/site-title.react.d.ts"
+            ],
+            "react": [
+                "./types/react.d.ts"
+            ],
+            "preact": [
+                "./types/preact.d.ts"
+            ]
         }
     }
 }

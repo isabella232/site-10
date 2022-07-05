@@ -1,11 +1,14 @@
-import { c, css, useHost } from "atomico";
+import { Props, c, css, useHost, useRef } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 import { useParallax } from "@atomico/hooks/use-parallax";
-function siteLink() {
+
+function siteLink({ href, target }: Props<typeof siteLink>) {
+    const refLink = useRef();
     const host = useHost();
     const state = useParallax(host);
     return (
-        <host shadowDom>
+        <host shadowDom onclick={() => refLink.current.click()}>
+            <a ref={refLink} href={href} target={target}></a>
             <div class="layer">
                 <div className="layer-line"></div>
             </div>
@@ -16,7 +19,8 @@ function siteLink() {
 }
 
 siteLink.props = {
-    myProp: String,
+    href: String,
+    target: String,
 };
 
 siteLink.styles = [
