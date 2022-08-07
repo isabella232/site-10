@@ -24,6 +24,7 @@ siteTitle.styles = [
             color: var(--color-title);
             line-height: var(--font-line-title);
             font-weight: var(--font-weight-title);
+            position: relative;
         }
         ::slotted(*) {
             font-size: var(--font-size);

@@ -20,6 +20,10 @@ siteCount.props = {
     color: {
         type: String,
     },
+    unstyle: {
+        type: Boolean,
+        reflect: true,
+    },
 };
 
 siteCount.styles = [
@@ -32,7 +36,6 @@ siteCount.styles = [
             align-items: center;
             grid-template-columns: auto 1fr;
             gap: var(--size-5);
-            font-size: calc(var(--size) * 0.6);
         }
         .dot {
             width: var(--size);
@@ -44,11 +47,7 @@ siteCount.styles = [
             border-radius: 100px;
             font-weight: var(--font-bold);
             color: var(--dot-color);
-        }
-        .label {
-            color: var(--color-subtitle);
-            letter-spacing: var(--size-1);
-            text-align: left;
+            font-size: calc(var(--size) * 0.6);
         }
     `,
 ];

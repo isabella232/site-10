@@ -1,4 +1,4 @@
-import { Props, c, css } from "atomico";
+import { Type, Props, c, css } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 import { useResponsiveState } from "@atomico/hooks/use-responsive-state";
 
@@ -21,7 +21,12 @@ function siteGrid({ columns, gap }: Props<typeof siteGrid>) {
 siteGrid.props = {
     columns: { type: String, value: "1" },
     gap: { type: Number, value: 6 },
-    centered: { type: Boolean, reflect: true },
+    align: {
+        type: String as Type<
+            "center" | "middle" | "top" | "bottom" | "centered"
+        >,
+        reflect: true,
+    },
 };
 
 siteGrid.styles = [
@@ -34,8 +39,18 @@ siteGrid.styles = [
             gap: var(--gap);
             color: var(--color-title);
         }
-        :host([centered]) {
-            align-items: center;
+        :host([align="top"]) {
+            align-items: flex-start;
+        }
+        :host([align="bottom"]) {
+            align-items: flex-end;
+        }
+        :host([align="middle"]),
+        :host([align="centered"]) {
+            align-items: flex-start;
+        }
+        :host([align="center"]),
+        :host([align="centered"]) {
             justify-content: center;
         }
     `,

@@ -9,13 +9,15 @@ function siteButton() {
     );
 }
 
-siteButton.props = {};
+siteButton.props = {
+    small: { type: Boolean, reflect: true },
+};
 
 siteButton.styles = [
     tokens,
     css`
         :host {
-            display: grid;
+            display: inline-grid;
             border: var(--button-border-width) solid var(--button-border-color);
             border-radius: var(--button-border-radius);
             justify-content: center;
@@ -24,6 +26,7 @@ siteButton.styles = [
             grid-template-columns: auto auto;
             padding: var(--button-padding);
             cursor: pointer;
+            font-size: var(--button-font-size);
         }
     `,
 ];

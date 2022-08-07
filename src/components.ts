@@ -15,3 +15,5 @@ export * from "./site-link/site-link";
 export * from "./site-menu/site-menu";
 export * from "./site-eye/site-eye";
 export * from "./site-footer/site-footer";
+export * from "./site-big-title/site-big-title";
+export * from "./site-graph-diff-2/site-graph-diff-2";

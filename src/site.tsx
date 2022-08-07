@@ -15,6 +15,7 @@ import {
     SiteMenu,
     SiteEye,
     SiteFooter,
+    SiteGraphDiff,
 } from "./components";
 import imgStep1 from "./assets/step-1.svg";
 import imgStep2 from "./assets/step-2.svg";
@@ -53,21 +54,27 @@ function site() {
                     <SiteEye class="eye"></SiteEye>
                     <div class="menu">
                         <div class="menu-group">
-                            <SiteText elegant>SOCIALS</SiteText>
+                            <SiteText elegant color="accent">
+                                SOCIALS
+                            </SiteText>
                             <div class="menu-items">
                                 <SiteLink>TWITTER</SiteLink>
                                 <SiteLink>LINKEDIN</SiteLink>
                                 <SiteLink>DISCORD</SiteLink>
                                 <SiteLink>GITHUB</SiteLink>
                             </div>
-                            <SiteText elegant>STARTED</SiteText>
+                            <SiteText elegant color="accent">
+                                STARTED
+                            </SiteText>
                             <div class="menu-items">
                                 <SiteLink>Get started</SiteLink>
                                 <SiteLink>Template</SiteLink>
                                 <SiteLink>Props</SiteLink>
                                 <SiteLink>Hooks</SiteLink>
                             </div>
-                            <SiteText elegant>UTILITIES</SiteText>
+                            <SiteText elegant color="accent">
+                                UTILITIES
+                            </SiteText>
                             <div class="menu-items">
                                 <SiteLink>@atomico/exports</SiteLink>
                                 <SiteLink>@atomico/ui</SiteLink>
@@ -81,13 +88,16 @@ function site() {
             <SiteIsotype>
                 <SiteGrid gap={3} centered>
                     <img src={imgLogoText} alt="" />
-                    <SiteText elegant>WEBCOMPONENTS</SiteText>
+                    <SiteText elegant color="accent">
+                        WEBCOMPONENTS
+                    </SiteText>
                     <SiteText textCenter>
                         Create interfaces with code
                         <br /> simple, fast and light
                     </SiteText>
                 </SiteGrid>
             </SiteIsotype>
+
             <SiteSection>
                 <SiteTitle>
                     <h1>Simple, fast and light</h1>
@@ -121,7 +131,9 @@ function site() {
                 <div slot="right" class="steps">
                     <div class="step">
                         <SiteCount color="#FF0099" value={1}>
-                            IMPORT
+                            <SiteText elegant color="title">
+                                IMPORT
+                            </SiteText>
                         </SiteCount>
                         <SiteCard>
                             <img class="step-img" src={imgStep1} alt="" />
@@ -129,7 +141,9 @@ function site() {
                     </div>
                     <div class="step">
                         <SiteCount color="#FFE600" value={2}>
-                            WEBCOMPONENT
+                            <SiteText elegant color="title">
+                                WEBCOMPONENT
+                            </SiteText>
                         </SiteCount>
                         <SiteCard>
                             <img class="step-img" src={imgStep2} alt="" />
@@ -137,7 +151,9 @@ function site() {
                     </div>
                     <div class="step">
                         <SiteCount color="#00FF90" value={3}>
-                            STYLES
+                            <SiteText elegant color="title">
+                                STYLES
+                            </SiteText>
                         </SiteCount>
                         <SiteCard>
                             <img class="step-img" src={imgStep3} alt="" />
@@ -145,7 +161,9 @@ function site() {
                     </div>
                     <div class="step">
                         <SiteCount color="#0088FF" value={4}>
-                            DECLARATIONS
+                            <SiteText elegant color="title">
+                                DECLARATIONS
+                            </SiteText>
                         </SiteCount>
                         <SiteCard>
                             <img class="step-img" src={imgStep4} alt="" />

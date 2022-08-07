@@ -18,6 +18,7 @@ siteText.props = {
     color: { type: String, value: "text" },
     elegant: { type: Boolean, reflect: true },
     textCenter: { type: Boolean, reflect: true },
+    columns: { type: Boolean, reflect: true },
 };
 
 siteText.styles = [
@@ -53,10 +54,13 @@ siteText.styles = [
             --font-size: 0.875em;
             --font-spacing: var(--size-3);
             --font-weight-text: var(--font-weight-bold);
-            --color: var(--color-accent);
         }
         :host([text-center]) {
             text-align: center;
+        }
+        :host([columns]) {
+            columns: 380px 2;
+            column-gap: var(--size-8);
         }
     `,
 ];
