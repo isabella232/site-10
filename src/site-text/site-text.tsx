@@ -14,7 +14,7 @@ function siteText({ size, color }: Props<typeof siteText>) {
 }
 
 siteText.props = {
-    size: { type: Number, value: 4 },
+    size: { type: Number, value: 4, reflect: true },
     color: { type: String, value: "text" },
     elegant: { type: Boolean, reflect: true },
     textCenter: { type: Boolean, reflect: true },
@@ -51,9 +51,11 @@ siteText.styles = [
             color: var(--color-title);
         }
         :host([elegant]) {
-            --font-size: 0.875em;
             --font-spacing: var(--size-3);
             --font-weight-text: var(--font-weight-bold);
+        }
+        :host([elegant]:not([size])) {
+            --font-size: 0.875em;
         }
         :host([text-center]) {
             text-align: center;
