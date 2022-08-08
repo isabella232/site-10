@@ -7,7 +7,11 @@ import {
     SiteCount,
     SiteGrid,
     SiteBigTitle,
+    SiteCard,
 } from "./components";
+import imgReact from "./assets/react-counter.svg";
+import imgAtomico from "./assets/atomico-counter.svg";
+import { CompareContent } from "@atomico/compare-content";
 
 function why() {
     return (
@@ -78,13 +82,88 @@ function why() {
                         </SiteGrid>
                     </SiteGrid>
                     <SiteGrid>
-                        <SiteGraphDiff></SiteGraphDiff>
+                        <SiteGraphDiff
+                            data={[
+                                {
+                                    label: "Atomico",
+                                    items: [
+                                        {
+                                            label: "10.9kB",
+                                            value: 10.9,
+                                        },
+
+                                        {
+                                            label: "8.18ms",
+                                            value: 8.18,
+                                        },
+                                        {
+                                            label: "39 lines",
+                                            value: 39,
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: "Lit",
+                                    items: [
+                                        {
+                                            label: "19.8kB",
+                                            value: 19.8,
+                                        },
+
+                                        {
+                                            label: "7.86ms",
+                                            value: 7.86,
+                                        },
+                                        {
+                                            label: "56 lines",
+                                            value: 56,
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: "Preact",
+                                    items: [
+                                        {
+                                            label: "22kB",
+                                            value: 22,
+                                        },
+
+                                        {
+                                            label: "9ms",
+                                            value: 9,
+                                        },
+                                        {
+                                            label: "36 lines",
+                                            value: 36,
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: "React",
+                                    hide: false,
+                                    items: [
+                                        {
+                                            label: "101.9kB",
+                                            value: 101.9,
+                                        },
+                                        {
+                                            label: "70.9ms",
+                                            value: 70.9,
+                                        },
+                                        {
+                                            label: "40 lines",
+                                            value: 40,
+                                        },
+                                    ],
+                                },
+                            ]}
+                        ></SiteGraphDiff>
                     </SiteGrid>
                 </SiteGrid>
             </SiteSection>
             <SiteSection>
-                <SiteBigTitle>DOS</SiteBigTitle>
                 <SiteGrid slot="content" align="top">
+                    <SiteBigTitle>DOS</SiteBigTitle>
                     <SiteTitle>
                         <h1>Curba de aprendisaje</h1>
                     </SiteTitle>
@@ -97,12 +176,7 @@ function why() {
                                 React. Atomico posee sintaxis inspirada en React
                                 Hooks reduciendo la fricción ante su adopcion.
                                 <br />
-                                Las ventajas de Atomico en su curba de
-                                aprendisaje son:
-                            </SiteText>
-                        </SiteGrid>
-                        <SiteGrid gap={4}>
-                            <SiteCount value={1}>
+                                <br />
                                 <SiteText>
                                     <strong>
                                         Si ya sabes React ya sabes Atomico al
@@ -112,21 +186,28 @@ function why() {
                                     desarrolladores con conocimiento en React
                                     para el uso de Atomico JS.
                                 </SiteText>
-                            </SiteCount>
-                            <SiteCount value={1}>
-                                <SiteText>
-                                    Atomico cuenta con soporte a Typescript,
-                                    permitiendo autocompletado por defecto al
-                                    usar JSX o Typescript.
-                                </SiteText>
-                            </SiteCount>
+                            </SiteText>
                         </SiteGrid>
+                        <SiteCard overflow>
+                            <CompareContent style={`padding: var(--size-4)`}>
+                                <img
+                                    slot="content"
+                                    src={imgReact}
+                                    alt="React counter"
+                                />
+                                <img
+                                    slot="content"
+                                    src={imgAtomico}
+                                    alt="Atomico counter"
+                                />
+                            </CompareContent>
+                        </SiteCard>
                     </SiteGrid>
                 </SiteGrid>
             </SiteSection>
             <SiteSection>
-                <SiteBigTitle>TRES</SiteBigTitle>
                 <SiteGrid slot="content" align="top">
+                    <SiteBigTitle>TRES</SiteBigTitle>
                     <SiteTitle>
                         <h1>Integracion</h1>
                     </SiteTitle>

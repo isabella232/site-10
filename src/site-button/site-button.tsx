@@ -27,6 +27,7 @@ siteButton.styles = [
             padding: var(--button-padding);
             cursor: pointer;
             font-size: var(--button-font-size);
+            transition: 0.3s ease all;
         }
     `,
 ];

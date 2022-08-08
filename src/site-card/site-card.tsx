@@ -16,6 +16,7 @@ function siteCard({ dotColor }: Props<typeof siteCard>) {
 
 siteCard.props = {
     dotColor: { type: String, reflect: true },
+    overflow: { type: Boolean, reflect: true },
 };
 
 siteCard.styles = [
@@ -32,7 +33,6 @@ siteCard.styles = [
             border: 1px solid var(--color-card-border);
             box-sizing: border-box;
             border-radius: var(--radius);
-            overflow: hidden;
             position: relative;
         }
         :host([dot-color]) .dot {
@@ -66,6 +66,9 @@ siteCard.styles = [
         }
         :host([dot-color]:hover) .dot {
             box-shadow: 0px 0px 42px var(--dot-bgcolor);
+        }
+        :host([overflow]) {
+            overflow: hidden;
         }
         .content {
             display: grid;

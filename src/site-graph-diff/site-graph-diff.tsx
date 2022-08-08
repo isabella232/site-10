@@ -54,6 +54,7 @@ function graphDiff({ minimumTolerance, colorRange }: Props<typeof graphDiff>) {
                         <td class="td-label td-title">
                             <div>{label}</div>
                             <SiteButton
+                                class={`button ${hide ? "button-hide" : ""}`}
                                 small
                                 onclick={() => {
                                     setData(
@@ -117,89 +118,15 @@ graphDiff.props = {
     colorRange: {
         type: Array,
         value: (): [string, number][] => [
-            ["linear-gradient(90deg, #00ff91,#00FF90 50%)", 0.25],
-            ["linear-gradient(90deg,#FFD500,#FFD500 50%)", 0.5],
-            ["linear-gradient(90deg,#FF6000,#FF6000)", 0.75],
-            ["linear-gradient(90deg,#FF0000,#FF0000)", 1],
+            ["#00FF90", 0.25],
+            ["#FFD500", 0.5],
+            ["#ff721b", 0.75],
+            ["#ff0f0f", 1],
         ],
     },
     data: {
         type: Array,
-        value: (): Data[] => [
-            {
-                label: "Atomico",
-                items: [
-                    {
-                        label: "2.5kB",
-                        value: 2.5,
-                    },
-
-                    {
-                        label: "6ms",
-                        value: 6,
-                    },
-                    {
-                        label: "24 lines",
-                        value: 24,
-                    },
-                ],
-            },
-            {
-                label: "Lit",
-                items: [
-                    {
-                        label: "10.5kB",
-                        value: 10.5,
-                    },
-
-                    {
-                        label: "6ms",
-                        value: 10,
-                    },
-                    {
-                        label: "24 lines",
-                        value: 48,
-                    },
-                ],
-            },
-            {
-                label: "Preact",
-                items: [
-                    {
-                        label: "2.5kB",
-                        value: 7.5,
-                    },
-
-                    {
-                        label: "6ms",
-                        value: 10,
-                    },
-                    {
-                        label: "24 lines",
-                        value: 28,
-                    },
-                ],
-            },
-            {
-                label: "React",
-                hide: false,
-                items: [
-                    {
-                        label: "2.5kB",
-                        value: 65.5,
-                    },
-
-                    {
-                        label: "6ms",
-                        value: 54,
-                    },
-                    {
-                        label: "24 lines",
-                        value: 24,
-                    },
-                ],
-            },
-        ],
+        value: (): Data[] => [],
     },
 };
 
@@ -243,7 +170,7 @@ graphDiff.styles = [
         }
         .line {
             width: var(--line-width);
-            height: var(--size-2);
+            height: var(--size-1);
             background: var(--line-color);
             border-radius: 0px 10px 10px 0px;
             transition: 1s ease all;
@@ -253,6 +180,9 @@ graphDiff.styles = [
         }
         .table-focus .tr-subgroup:not(.tr-subgroup-focus) {
             opacity: 0.25;
+        }
+        .button-hide {
+            opacity: 0.5;
         }
     `,
 ];

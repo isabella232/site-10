@@ -7,10 +7,10 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "module",
     "scripts": {
-        "start": "vite",
+        "start": "vite --force",
         "build": "vite build",
         "test": "vitest",
         "coverage": "vitest run --coverage",
@@ -19,7 +19,8 @@
         "create": "scaff templates/component src"
     },
     "dependencies": {
-        "@atomico/hooks": "^3.45.0",
+        "@atomico/compare-content": "^1.0.5",
+        "@atomico/hooks": "^3.46.0",
         "atomico": "latest"
     },
     "devDependencies": {
