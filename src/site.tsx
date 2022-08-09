@@ -135,7 +135,7 @@ function site() {
                                 IMPORT
                             </SiteText>
                         </SiteCount>
-                        <SiteCard>
+                        <SiteCard padding overflow>
                             <img class="step-img" src={imgStep1} alt="" />
                         </SiteCard>
                     </div>
@@ -145,7 +145,7 @@ function site() {
                                 WEBCOMPONENT
                             </SiteText>
                         </SiteCount>
-                        <SiteCard>
+                        <SiteCard padding overflow>
                             <img class="step-img" src={imgStep2} alt="" />
                         </SiteCard>
                     </div>
@@ -155,7 +155,7 @@ function site() {
                                 STYLES
                             </SiteText>
                         </SiteCount>
-                        <SiteCard>
+                        <SiteCard padding overflow>
                             <img class="step-img" src={imgStep3} alt="" />
                         </SiteCard>
                     </div>
@@ -165,7 +165,7 @@ function site() {
                                 DECLARATIONS
                             </SiteText>
                         </SiteCount>
-                        <SiteCard>
+                        <SiteCard padding overflow>
                             <img class="step-img" src={imgStep4} alt="" />
                         </SiteCard>
                     </div>
@@ -183,7 +183,7 @@ function site() {
                 </SiteText>
                 <img slot="right" src={imgAtom} />
                 <SiteGrid slot="content" columns="1, 2 768px, 3 980px">
-                    <SiteCard dotColor="#FFE600">
+                    <SiteCard padding overflow dotColor="#FFE600">
                         <SiteText color="subtitle">
                             <h4>@atomico/exports</h4>
                         </SiteText>
@@ -194,7 +194,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#0088FF">
+                    <SiteCard padding overflow dotColor="#0088FF">
                         <SiteText color="subtitle">
                             <h4>@atomico/router</h4>
                         </SiteText>
@@ -205,7 +205,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#00FF90">
+                    <SiteCard padding overflow dotColor="#00FF90">
                         <SiteText color="subtitle">
                             <h4>@atomico/store</h4>
                         </SiteText>
@@ -216,7 +216,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#00FF90">
+                    <SiteCard padding overflow dotColor="#00FF90">
                         <SiteText color="subtitle">
                             <h4>@atomico/hooks</h4>
                         </SiteText>
@@ -227,7 +227,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#00FF90">
+                    <SiteCard padding overflow dotColor="#00FF90">
                         <SiteText color="subtitle">
                             <h4>@atomico/react</h4>
                         </SiteText>
@@ -238,7 +238,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#00FF90">
+                    <SiteCard padding overflow dotColor="#00FF90">
                         <SiteText color="subtitle">
                             <h4>@atomico/router</h4>
                         </SiteText>
@@ -249,7 +249,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#00FF90">
+                    <SiteCard padding overflow dotColor="#00FF90">
                         <SiteText color="subtitle">
                             <h4>@atomico/components</h4>
                         </SiteText>
@@ -260,7 +260,7 @@ function site() {
                             </small>
                         </SiteText>
                     </SiteCard>
-                    <SiteCard dotColor="#00FF90">
+                    <SiteCard padding overflow dotColor="#00FF90">
                         <SiteText color="subtitle">
                             <h4>@atomico/ui</h4>
                         </SiteText>

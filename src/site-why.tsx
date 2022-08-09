@@ -188,7 +188,7 @@ function why() {
                                 </SiteText>
                             </SiteText>
                         </SiteGrid>
-                        <SiteCard overflow>
+                        <SiteCard>
                             <CompareContent style={`padding: var(--size-4)`}>
                                 <img
                                     slot="content"
