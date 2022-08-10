@@ -47,9 +47,6 @@ siteSection.styles = [
         :host([align="top"]) {
             --align: top;
         }
-        :host-context([context="section"]) {
-            --padding: 0px;
-        }
         .left {
             grid-area: left;
         }
