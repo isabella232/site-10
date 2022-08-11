@@ -83,14 +83,12 @@ siteSection.styles = [
             align-items: var(--align);
             gap: var(--gap);
             grid-template:
-                "header header" auto
                 "left right" auto
                 "content content" auto / 1fr 1fr;
         }
         @media (max-width: 768px) {
             .layout {
                 grid-template:
-                    "header" auto
                     "left" auto
                     "right" auto
                     "content" auto / 1fr;
