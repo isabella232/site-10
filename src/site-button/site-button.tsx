@@ -1,9 +1,24 @@
-import { Props, c, css } from "atomico";
+import { Props, c, css, useRef } from "atomico";
+import { useRender } from "@atomico/hooks/use-render";
 import { tokens } from "../site-tokens/site-tokens";
 
-function siteButton({ color }: Props<typeof siteButton>) {
+function siteButton({ color, href, open }: Props<typeof siteButton>) {
+    const ref = useRef<HTMLAnchorElement>();
+    useRender(
+        () =>
+            href && (
+                <a
+                    slot="link"
+                    href={href}
+                    ref={ref}
+                    target={open ? "_blank" : ""}
+                ></a>
+            ),
+        [href, open]
+    );
+
     return (
-        <host shadowDom>
+        <host shadowDom onclick={() => ref.current.click()}>
             <slot></slot>
             {color && (
                 <style>{`:host{--button-border-color:var( --color-${color},${color} )!important}`}</style>
@@ -15,19 +30,20 @@ function siteButton({ color }: Props<typeof siteButton>) {
 siteButton.props = {
     small: { type: Boolean, reflect: true },
     color: { type: String, reflect: true },
+    href: { type: String },
+    open: { type: String },
 };
 
 siteButton.styles = [
     tokens,
     css`
         :host {
-            display: inline-grid;
+            display: inline-flex;
             border: var(--button-border-width) solid var(--button-border-color);
             border-radius: var(--button-border-radius);
             justify-content: center;
             align-items: center;
             gap: var(--button-gap);
-            grid-template-columns: auto auto;
             padding: var(--button-padding);
             cursor: pointer;
             font-size: var(--button-font-size);
