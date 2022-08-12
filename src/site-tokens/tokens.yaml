@@ -18,6 +18,7 @@ button:
         color: "@color.card.border"
     gap: "@size.4"
     padding: "@size.2 @size.4"
+    color: "$color.title"
 size:
     "1": 4px
     "2": 8px

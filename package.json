@@ -7,7 +7,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "0.4.1",
+    "version": "0.5.0",
     "type": "module",
     "scripts": {
         "start": "vite --force",
@@ -25,7 +25,7 @@
     },
     "devDependencies": {
         "@atomico/exports": "^0.34.0",
-        "@atomico/postcss-tokens": "latest",
+        "@atomico/postcss-tokens": "^1.5.0",
         "@atomico/scaffold": "latest",
         "@atomico/tsconfig": "1.0.0",
         "@atomico/vite": "latest",

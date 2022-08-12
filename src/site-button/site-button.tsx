@@ -1,16 +1,20 @@
 import { Props, c, css } from "atomico";
 import { tokens } from "../site-tokens/site-tokens";
 
-function siteButton() {
+function siteButton({ color }: Props<typeof siteButton>) {
     return (
         <host shadowDom>
             <slot></slot>
+            {color && (
+                <style>{`:host{--button-border-color:var( --color-${color},${color} )!important}`}</style>
+            )}
         </host>
     );
 }
 
 siteButton.props = {
     small: { type: Boolean, reflect: true },
+    color: { type: String, reflect: true },
 };
 
 siteButton.styles = [
@@ -28,6 +32,7 @@ siteButton.styles = [
             cursor: pointer;
             font-size: var(--button-font-size);
             transition: 0.3s ease all;
+            color: var(--button-color);
         }
     `,
 ];
